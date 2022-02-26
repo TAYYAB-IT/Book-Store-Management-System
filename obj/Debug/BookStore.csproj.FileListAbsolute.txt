@@ -1,0 +1,17 @@
+E:\5th\Projects\C# Project\BookStore\BookStore\BookStore\bin\Debug\BookStore.exe.config
+E:\5th\Projects\C# Project\BookStore\BookStore\BookStore\bin\Debug\BookStore.exe
+E:\5th\Projects\C# Project\BookStore\BookStore\BookStore\bin\Debug\BookStore.pdb
+E:\5th\Projects\C# Project\BookStore\BookStore\BookStore\obj\Debug\BookStore.csproj.AssemblyReference.cache
+E:\5th\Projects\C# Project\BookStore\BookStore\BookStore\obj\Debug\BookStore.Login_Page.resources
+E:\5th\Projects\C# Project\BookStore\BookStore\BookStore\obj\Debug\BookStore.Properties.Resources.resources
+E:\5th\Projects\C# Project\BookStore\BookStore\BookStore\obj\Debug\BookStore.csproj.GenerateResource.cache
+E:\5th\Projects\C# Project\BookStore\BookStore\BookStore\obj\Debug\BookStore.csproj.CoreCompileInputs.cache
+E:\5th\Projects\C# Project\BookStore\BookStore\BookStore\obj\Debug\BookStore.exe
+E:\5th\Projects\C# Project\BookStore\BookStore\BookStore\obj\Debug\BookStore.pdb
+E:\5th\Projects\C# Project\BookStore\BookStore\BookStore\obj\Debug\BookStore.Forms.Dashboard.resources
+E:\5th\Projects\C# Project\BookStore\BookStore\BookStore\obj\Debug\BookStore.UC.Home_UC.resources
+E:\5th\Projects\C# Project\BookStore\BookStore\BookStore\obj\Debug\BookStore.UC.SaleBooks_UC.resources
+E:\5th\Projects\C# Project\BookStore\BookStore\BookStore\obj\Debug\BookStore.UC.Stock_UC.resources
+E:\5th\Projects\C# Project\BookStore\BookStore\BookStore\obj\Debug\BookStore.UC.Expenses_UC.resources
+E:\5th\Projects\C# Project\BookStore\BookStore\BookStore\obj\Debug\BookStore.UC.ViewSales_UC.resources
+E:\5th\Projects\C# Project\BookStore\BookStore\BookStore\obj\Debug\BookStore.Forms.Confirm_logout.resources
