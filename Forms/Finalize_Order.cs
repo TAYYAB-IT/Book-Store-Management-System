@@ -7,25 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BookStore.Forms;
-namespace BookStore.UC
+
+namespace BookStore.Forms
 {
-    public partial class Expenses_UC : UserControl
+    public partial class Finalize_Order : Form
     {
-        public Expenses_UC()
+        public Finalize_Order()
         {
             InitializeComponent();
         }
 
-        private void btnAddExpense_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            Add_Expense add_exp = new Add_Expense();
-            add_exp.ShowDialog();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Refresh();
+            this.Dispose();
         }
     }
 }

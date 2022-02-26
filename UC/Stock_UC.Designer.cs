@@ -38,6 +38,7 @@ namespace BookStore.UC
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -50,7 +51,6 @@ namespace BookStore.UC
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -65,8 +65,16 @@ namespace BookStore.UC
             this.panel5.Controls.Add(this.btnAddNewBooks);
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(934, 70);
+            this.panel5.Size = new System.Drawing.Size(959, 70);
             this.panel5.TabIndex = 6;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox7.Location = new System.Drawing.Point(770, 30);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(179, 20);
+            this.textBox7.TabIndex = 6;
             // 
             // label5
             // 
@@ -74,7 +82,7 @@ namespace BookStore.UC
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(501, 27);
+            this.label5.Location = new System.Drawing.Point(526, 27);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 19);
             this.label5.TabIndex = 4;
@@ -90,7 +98,7 @@ namespace BookStore.UC
             "Book Title",
             "Author",
             "Publisher"});
-            this.comboBox2.Location = new System.Drawing.Point(608, 29);
+            this.comboBox2.Location = new System.Drawing.Point(633, 29);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(131, 21);
             this.comboBox2.TabIndex = 3;
@@ -110,6 +118,7 @@ namespace BookStore.UC
             this.button2.Text = "   Add Stock";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnAddNewBooks
             // 
@@ -126,12 +135,14 @@ namespace BookStore.UC
             this.btnAddNewBooks.Text = "   Add New Book";
             this.btnAddNewBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddNewBooks.UseVisualStyleBackColor = true;
+            this.btnAddNewBooks.Click += new System.EventHandler(this.btnAddNewBooks_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Info;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -141,12 +152,12 @@ namespace BookStore.UC
             this.Column5,
             this.Column6,
             this.Column7});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 66);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 76);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(934, 379);
+            this.dataGridView1.Size = new System.Drawing.Size(915, 342);
             this.dataGridView1.TabIndex = 7;
             // 
             // Column1
@@ -215,14 +226,6 @@ namespace BookStore.UC
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             this.Column7.Width = 170;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Location = new System.Drawing.Point(745, 30);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(179, 20);
-            this.textBox7.TabIndex = 6;
             // 
             // Stock_UC
             // 

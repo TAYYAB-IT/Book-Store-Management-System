@@ -15,3 +15,8 @@ E:\5th\Projects\C# Project\BookStore\BookStore\BookStore\obj\Debug\BookStore.UC.
 E:\5th\Projects\C# Project\BookStore\BookStore\BookStore\obj\Debug\BookStore.UC.Expenses_UC.resources
 E:\5th\Projects\C# Project\BookStore\BookStore\BookStore\obj\Debug\BookStore.UC.ViewSales_UC.resources
 E:\5th\Projects\C# Project\BookStore\BookStore\BookStore\obj\Debug\BookStore.Forms.Confirm_logout.resources
+E:\5th\Projects\C# Project\BookStore\BookStore\BookStore\obj\Debug\BookStore.Forms.Add_Book.resources
+E:\5th\Projects\C# Project\BookStore\BookStore\BookStore\obj\Debug\BookStore.Forms.Add_Stock.resources
+E:\5th\Projects\C# Project\BookStore\BookStore\BookStore\obj\Debug\BookStore.Forms.Add_Book_Category.resources
+E:\5th\Projects\C# Project\BookStore\BookStore\BookStore\obj\Debug\BookStore.Forms.Add_Expense.resources
+E:\5th\Projects\C# Project\BookStore\BookStore\BookStore\obj\Debug\BookStore.Forms.Finalize_Order.resources

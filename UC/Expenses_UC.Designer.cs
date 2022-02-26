@@ -34,8 +34,9 @@ namespace BookStore.UC
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.btnAddNewBooks = new System.Windows.Forms.Button();
+            this.btnAddExpense = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,10 +50,10 @@ namespace BookStore.UC
             this.panel5.Controls.Add(this.button1);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.button2);
-            this.panel5.Controls.Add(this.btnAddNewBooks);
+            this.panel5.Controls.Add(this.btnAddExpense);
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(934, 67);
+            this.panel5.Size = new System.Drawing.Size(967, 67);
             this.panel5.TabIndex = 10;
             // 
             // button1
@@ -71,6 +72,7 @@ namespace BookStore.UC
             this.button1.Text = "   Refresh";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -78,7 +80,7 @@ namespace BookStore.UC
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(594, 24);
+            this.label5.Location = new System.Drawing.Point(627, 24);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(150, 19);
             this.label5.TabIndex = 4;
@@ -102,22 +104,23 @@ namespace BookStore.UC
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // btnAddNewBooks
+            // btnAddExpense
             // 
-            this.btnAddNewBooks.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddNewBooks.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnAddNewBooks.FlatAppearance.BorderSize = 0;
-            this.btnAddNewBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddNewBooks.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNewBooks.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewBooks.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNewBooks.Image")));
-            this.btnAddNewBooks.Location = new System.Drawing.Point(0, 0);
-            this.btnAddNewBooks.Name = "btnAddNewBooks";
-            this.btnAddNewBooks.Size = new System.Drawing.Size(233, 67);
-            this.btnAddNewBooks.TabIndex = 0;
-            this.btnAddNewBooks.Text = "   Add New Expense";
-            this.btnAddNewBooks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddNewBooks.UseVisualStyleBackColor = true;
+            this.btnAddExpense.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddExpense.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnAddExpense.FlatAppearance.BorderSize = 0;
+            this.btnAddExpense.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddExpense.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddExpense.ForeColor = System.Drawing.Color.White;
+            this.btnAddExpense.Image = ((System.Drawing.Image)(resources.GetObject("btnAddExpense.Image")));
+            this.btnAddExpense.Location = new System.Drawing.Point(0, 0);
+            this.btnAddExpense.Name = "btnAddExpense";
+            this.btnAddExpense.Size = new System.Drawing.Size(233, 67);
+            this.btnAddExpense.TabIndex = 0;
+            this.btnAddExpense.Text = "   Add New Expense";
+            this.btnAddExpense.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddExpense.UseVisualStyleBackColor = true;
+            this.btnAddExpense.Click += new System.EventHandler(this.btnAddExpense_Click);
             // 
             // dataGridView1
             // 
@@ -127,6 +130,7 @@ namespace BookStore.UC
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
             this.Column1,
             this.Column2,
             this.Column3});
@@ -137,6 +141,12 @@ namespace BookStore.UC
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(934, 381);
             this.dataGridView1.TabIndex = 11;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "Expense ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             // 
             // Column1
             // 
@@ -167,7 +177,7 @@ namespace BookStore.UC
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel5);
             this.Name = "Expenses_UC";
-            this.Size = new System.Drawing.Size(934, 445);
+            this.Size = new System.Drawing.Size(915, 342);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -181,8 +191,9 @@ namespace BookStore.UC
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnAddNewBooks;
+        private System.Windows.Forms.Button btnAddExpense;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

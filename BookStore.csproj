@@ -46,6 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Add_Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Add_Book.Designer.cs">
+      <DependentUpon>Add_Book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Add_Book_Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Add_Book_Category.Designer.cs">
+      <DependentUpon>Add_Book_Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Add_Expense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Add_Expense.Designer.cs">
+      <DependentUpon>Add_Expense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Add_Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Add_Stock.Designer.cs">
+      <DependentUpon>Add_Stock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +81,12 @@
     </Compile>
     <Compile Include="Forms\Confirm_logout.Designer.cs">
       <DependentUpon>Confirm_logout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Finalize_Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Finalize_Order.Designer.cs">
+      <DependentUpon>Finalize_Order.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -96,11 +126,26 @@
     <Compile Include="UC\ViewSales_UC.Designer.cs">
       <DependentUpon>ViewSales_UC.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\Add_Book.resx">
+      <DependentUpon>Add_Book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Add_Book_Category.resx">
+      <DependentUpon>Add_Book_Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Add_Expense.resx">
+      <DependentUpon>Add_Expense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Add_Stock.resx">
+      <DependentUpon>Add_Stock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Confirm_logout.resx">
       <DependentUpon>Confirm_logout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Finalize_Order.resx">
+      <DependentUpon>Finalize_Order.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

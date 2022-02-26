@@ -44,13 +44,9 @@ namespace BookStore.UC
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
+            this.finalize_order = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,6 +56,10 @@ namespace BookStore.UC
             this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -222,47 +222,16 @@ namespace BookStore.UC
             this.panel1.BackColor = System.Drawing.Color.Teal;
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.listView1);
-            this.panel1.Location = new System.Drawing.Point(656, -9);
+            this.panel1.Location = new System.Drawing.Point(656, -15);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(366, 598);
+            this.panel1.Size = new System.Drawing.Size(366, 604);
             this.panel1.TabIndex = 17;
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(-1, 12);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(276, 245);
-            this.listView1.TabIndex = 18;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Tracking ID";
-            this.columnHeader1.Width = 76;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Book Title";
-            this.columnHeader2.Width = 92;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Qty";
-            this.columnHeader3.Width = 47;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.Info;
             this.panel5.Controls.Add(this.panel8);
-            this.panel5.Controls.Add(this.button7);
+            this.panel5.Controls.Add(this.finalize_order);
             this.panel5.Controls.Add(this.button6);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.label2);
@@ -282,19 +251,20 @@ namespace BookStore.UC
             this.panel8.Size = new System.Drawing.Size(273, 7);
             this.panel8.TabIndex = 5;
             // 
-            // button7
+            // finalize_order
             // 
-            this.button7.BackColor = System.Drawing.Color.SeaGreen;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(167, 111);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(92, 42);
-            this.button7.TabIndex = 2;
-            this.button7.Text = "Finish";
-            this.button7.UseVisualStyleBackColor = false;
+            this.finalize_order.BackColor = System.Drawing.Color.SeaGreen;
+            this.finalize_order.FlatAppearance.BorderSize = 0;
+            this.finalize_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.finalize_order.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.finalize_order.ForeColor = System.Drawing.Color.White;
+            this.finalize_order.Location = new System.Drawing.Point(167, 111);
+            this.finalize_order.Name = "finalize_order";
+            this.finalize_order.Size = new System.Drawing.Size(92, 42);
+            this.finalize_order.TabIndex = 2;
+            this.finalize_order.Text = "Finish";
+            this.finalize_order.UseVisualStyleBackColor = false;
+            this.finalize_order.Click += new System.EventHandler(this.finalize_order_Click);
             // 
             // button6
             // 
@@ -407,6 +377,37 @@ namespace BookStore.UC
             this.panel6.Size = new System.Drawing.Size(273, 7);
             this.panel6.TabIndex = 4;
             // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listView1.GridLines = true;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(-1, 12);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(276, 245);
+            this.listView1.TabIndex = 18;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Tracking ID";
+            this.columnHeader1.Width = 76;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Book Title";
+            this.columnHeader2.Width = 92;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Qty";
+            this.columnHeader3.Width = 47;
+            // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Amount";
@@ -462,7 +463,7 @@ namespace BookStore.UC
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button finalize_order;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

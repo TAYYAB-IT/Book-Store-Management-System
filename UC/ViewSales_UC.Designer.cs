@@ -50,7 +50,7 @@ namespace BookStore.UC
             this.panel5.Controls.Add(this.label5);
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(934, 67);
+            this.panel5.Size = new System.Drawing.Size(973, 67);
             this.panel5.TabIndex = 14;
             // 
             // button1
@@ -76,7 +76,7 @@ namespace BookStore.UC
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(347, 20);
+            this.label5.Location = new System.Drawing.Point(386, 20);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(142, 25);
             this.label5.TabIndex = 4;
@@ -88,6 +88,7 @@ namespace BookStore.UC
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Info;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -100,7 +101,7 @@ namespace BookStore.UC
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(934, 381);
+            this.dataGridView1.Size = new System.Drawing.Size(915, 342);
             this.dataGridView1.TabIndex = 15;
             // 
             // Column1

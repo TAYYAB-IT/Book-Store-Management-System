@@ -96,6 +96,21 @@ namespace BookStore.Forms
 
         }
 
-       
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            labelTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            timer1.Enabled=timer2 .Enabled= true;
+            timer1.Interval =timer2.Interval= 1000;
+           
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            labelDate.Text = DateTime.Now.ToString("d");
+        }
     }
 }

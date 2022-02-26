@@ -29,6 +29,7 @@ namespace BookStore.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,10 +52,16 @@ namespace BookStore.Forms
             this.panelControls = new System.Windows.Forms.Panel();
             this.panelSide = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.labelDate = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -119,12 +126,11 @@ namespace BookStore.Forms
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Teal;
-            this.panel2.Controls.Add(this.labelTime);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(212, 46);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(937, 137);
+            this.panel2.Size = new System.Drawing.Size(1162, 137);
             this.panel2.TabIndex = 5;
             // 
             // labelTime
@@ -133,7 +139,7 @@ namespace BookStore.Forms
             this.labelTime.AutoSize = true;
             this.labelTime.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTime.ForeColor = System.Drawing.Color.White;
-            this.labelTime.Location = new System.Drawing.Point(648, 46);
+            this.labelTime.Location = new System.Drawing.Point(46, 131);
             this.labelTime.Name = "labelTime";
             this.labelTime.Size = new System.Drawing.Size(83, 19);
             this.labelTime.TabIndex = 0;
@@ -164,11 +170,9 @@ namespace BookStore.Forms
             // panel4
             // 
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.button9);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1147, 48);
+            this.panel4.Size = new System.Drawing.Size(1175, 48);
             this.panel4.TabIndex = 4;
             // 
             // label4
@@ -184,7 +188,6 @@ namespace BookStore.Forms
             // 
             // button9
             // 
-            this.button9.Dock = System.Windows.Forms.DockStyle.Right;
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -192,9 +195,9 @@ namespace BookStore.Forms
             this.button9.ForeColor = System.Drawing.Color.White;
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(884, 0);
+            this.button9.Location = new System.Drawing.Point(162, 0);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(263, 48);
+            this.button9.Size = new System.Drawing.Size(53, 55);
             this.button9.TabIndex = 2;
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = true;
@@ -298,7 +301,7 @@ namespace BookStore.Forms
             this.logout_button.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logout_button.ForeColor = System.Drawing.Color.White;
             this.logout_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logout_button.Location = new System.Drawing.Point(0, 457);
+            this.logout_button.Location = new System.Drawing.Point(0, 464);
             this.logout_button.Name = "logout_button";
             this.logout_button.Size = new System.Drawing.Size(215, 60);
             this.logout_button.TabIndex = 12;
@@ -311,7 +314,7 @@ namespace BookStore.Forms
             // 
             this.panelControls.Location = new System.Drawing.Point(215, 182);
             this.panelControls.Name = "panelControls";
-            this.panelControls.Size = new System.Drawing.Size(934, 445);
+            this.panelControls.Size = new System.Drawing.Size(960, 466);
             this.panelControls.TabIndex = 13;
             // 
             // panelSide
@@ -325,20 +328,63 @@ namespace BookStore.Forms
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Teal;
-            this.panel1.Location = new System.Drawing.Point(0, 519);
+            this.panel1.Location = new System.Drawing.Point(0, 530);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(215, 108);
+            this.panel1.Size = new System.Drawing.Size(215, 226);
             this.panel1.TabIndex = 15;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Teal;
+            this.panel5.Controls.Add(this.labelTime);
+            this.panel5.Controls.Add(this.labelDate);
+            this.panel5.Controls.Add(this.button9);
+            this.panel5.Location = new System.Drawing.Point(1168, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(202, 756);
+            this.panel5.TabIndex = 16;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Teal;
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(0, 645);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1370, 104);
+            this.panel6.TabIndex = 17;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // labelDate
+            // 
+            this.labelDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelDate.AutoSize = true;
+            this.labelDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDate.ForeColor = System.Drawing.Color.White;
+            this.labelDate.Location = new System.Drawing.Point(46, 75);
+            this.labelDate.Name = "labelDate";
+            this.labelDate.Size = new System.Drawing.Size(93, 19);
+            this.labelDate.TabIndex = 1;
+            this.labelDate.Text = "DD-MM-YY";
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(1147, 626);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ControlBox = false;
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panelControls);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelSide);
-            this.Controls.Add(this.panelControls);
             this.Controls.Add(this.logout_button);
             this.Controls.Add(this.btnViewSales);
             this.Controls.Add(this.btnExpense);
@@ -349,8 +395,10 @@ namespace BookStore.Forms
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.btnSaleBooks);
             this.Name = "Dashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -358,6 +406,8 @@ namespace BookStore.Forms
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -385,5 +435,10 @@ namespace BookStore.Forms
         private System.Windows.Forms.Panel panelControls;
         private System.Windows.Forms.Panel panelSide;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label labelDate;
     }
 }
