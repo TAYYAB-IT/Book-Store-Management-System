@@ -206,7 +206,13 @@ namespace BookStore.UC
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                row.DefaultCellStyle.BackColor = Color.White;
+            }
             this.selected_row = e.RowIndex;
+            dataGridView1.Rows[this.selected_row].DefaultCellStyle.BackColor = Color.Teal;
+           
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
