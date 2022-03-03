@@ -29,14 +29,15 @@ namespace BookStore.UC
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.add_tocart = new System.Windows.Forms.Button();
+            this.b_discount = new System.Windows.Forms.TextBox();
+            this.b_id = new System.Windows.Forms.TextBox();
+            this.b_author = new System.Windows.Forms.TextBox();
+            this.b_publisher = new System.Windows.Forms.TextBox();
+            this.b_price = new System.Windows.Forms.TextBox();
+            this.b_title = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -44,24 +45,26 @@ namespace BookStore.UC
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tracking_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Book_title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Net_Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total_amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.finalize_order = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.total_amt = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_decrement = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_increment = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
@@ -78,72 +81,76 @@ namespace BookStore.UC
             this.label4.TabIndex = 1;
             this.label4.Text = "Sell Books";
             // 
-            // button1
+            // add_tocart
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.Color.Teal;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(254, 369);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 38);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Add to Cart";
-            this.button1.UseVisualStyleBackColor = false;
+            this.add_tocart.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.add_tocart.BackColor = System.Drawing.Color.Teal;
+            this.add_tocart.FlatAppearance.BorderSize = 0;
+            this.add_tocart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.add_tocart.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_tocart.ForeColor = System.Drawing.Color.White;
+            this.add_tocart.Location = new System.Drawing.Point(254, 369);
+            this.add_tocart.Name = "add_tocart";
+            this.add_tocart.Size = new System.Drawing.Size(138, 38);
+            this.add_tocart.TabIndex = 16;
+            this.add_tocart.Text = "Add to Cart";
+            this.add_tocart.UseVisualStyleBackColor = false;
+            this.add_tocart.Click += new System.EventHandler(this.add_tocart_Click);
             // 
-            // textBox7
+            // b_discount
             // 
-            this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox7.Location = new System.Drawing.Point(425, 288);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(179, 20);
-            this.textBox7.TabIndex = 10;
+            this.b_discount.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.b_discount.Location = new System.Drawing.Point(425, 288);
+            this.b_discount.Name = "b_discount";
+            this.b_discount.Size = new System.Drawing.Size(179, 20);
+            this.b_discount.TabIndex = 10;
+            this.b_discount.Text = "0";
+            this.b_discount.TextChanged += new System.EventHandler(this.b_discount_TextChanged);
             // 
-            // textBox2
+            // b_id
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(117, 153);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(487, 20);
-            this.textBox2.TabIndex = 11;
+            this.b_id.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.b_id.Location = new System.Drawing.Point(117, 153);
+            this.b_id.Name = "b_id";
+            this.b_id.Size = new System.Drawing.Size(487, 20);
+            this.b_id.TabIndex = 11;
+            this.b_id.TextChanged += new System.EventHandler(this.b_id_TextChanged);
             // 
-            // textBox4
+            // b_author
             // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox4.Location = new System.Drawing.Point(423, 203);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(179, 20);
-            this.textBox4.TabIndex = 12;
+            this.b_author.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.b_author.Location = new System.Drawing.Point(423, 203);
+            this.b_author.Name = "b_author";
+            this.b_author.ReadOnly = true;
+            this.b_author.Size = new System.Drawing.Size(179, 20);
+            this.b_author.TabIndex = 12;
             // 
-            // textBox5
+            // b_publisher
             // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox5.Location = new System.Drawing.Point(117, 245);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(487, 20);
-            this.textBox5.TabIndex = 13;
+            this.b_publisher.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.b_publisher.Location = new System.Drawing.Point(117, 245);
+            this.b_publisher.Name = "b_publisher";
+            this.b_publisher.ReadOnly = true;
+            this.b_publisher.Size = new System.Drawing.Size(487, 20);
+            this.b_publisher.TabIndex = 13;
             // 
-            // textBox6
+            // b_price
             // 
-            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox6.Location = new System.Drawing.Point(117, 291);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(179, 20);
-            this.textBox6.TabIndex = 14;
+            this.b_price.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.b_price.Location = new System.Drawing.Point(117, 291);
+            this.b_price.Name = "b_price";
+            this.b_price.ReadOnly = true;
+            this.b_price.Size = new System.Drawing.Size(179, 20);
+            this.b_price.TabIndex = 14;
             // 
-            // textBox3
+            // b_title
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.Location = new System.Drawing.Point(117, 203);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(179, 20);
-            this.textBox3.TabIndex = 15;
+            this.b_title.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.b_title.Location = new System.Drawing.Point(117, 203);
+            this.b_title.Name = "b_title";
+            this.b_title.ReadOnly = true;
+            this.b_title.Size = new System.Drawing.Size(179, 20);
+            this.b_title.TabIndex = 15;
             // 
             // label10
             // 
@@ -220,12 +227,75 @@ namespace BookStore.UC
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.listView1);
-            this.panel1.Location = new System.Drawing.Point(656, -15);
+            this.panel1.Location = new System.Drawing.Point(640, -15);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(366, 604);
+            this.panel1.Size = new System.Drawing.Size(382, 604);
             this.panel1.TabIndex = 17;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tracking_id,
+            this.Book_title,
+            this.Qty,
+            this.discount,
+            this.Net_Amount,
+            this.Total_amount});
+            this.dataGridView1.Location = new System.Drawing.Point(0, 15);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(291, 252);
+            this.dataGridView1.TabIndex = 19;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // tracking_id
+            // 
+            this.tracking_id.HeaderText = "Tracking ID";
+            this.tracking_id.Name = "tracking_id";
+            this.tracking_id.ReadOnly = true;
+            // 
+            // Book_title
+            // 
+            this.Book_title.HeaderText = "Book Title";
+            this.Book_title.Name = "Book_title";
+            this.Book_title.ReadOnly = true;
+            // 
+            // Qty
+            // 
+            this.Qty.HeaderText = "Qty";
+            this.Qty.Name = "Qty";
+            this.Qty.ReadOnly = true;
+            // 
+            // discount
+            // 
+            this.discount.HeaderText = "D/B";
+            this.discount.Name = "discount";
+            this.discount.ReadOnly = true;
+            // 
+            // Net_Amount
+            // 
+            this.Net_Amount.HeaderText = "Net Amount";
+            this.Net_Amount.Name = "Net_Amount";
+            this.Net_Amount.ReadOnly = true;
+            // 
+            // Total_amount
+            // 
+            this.Total_amount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Total_amount.HeaderText = "Total Amount";
+            this.Total_amount.Name = "Total_amount";
+            this.Total_amount.ReadOnly = true;
+            this.Total_amount.Width = 95;
             // 
             // panel5
             // 
@@ -233,13 +303,13 @@ namespace BookStore.UC
             this.panel5.Controls.Add(this.panel8);
             this.panel5.Controls.Add(this.finalize_order);
             this.panel5.Controls.Add(this.button6);
-            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.total_amt);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Location = new System.Drawing.Point(2, 273);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(273, 178);
+            this.panel5.Size = new System.Drawing.Size(289, 178);
             this.panel5.TabIndex = 18;
             // 
             // panel8
@@ -248,7 +318,7 @@ namespace BookStore.UC
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 44);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(273, 7);
+            this.panel8.Size = new System.Drawing.Size(289, 7);
             this.panel8.TabIndex = 5;
             // 
             // finalize_order
@@ -279,16 +349,17 @@ namespace BookStore.UC
             this.button6.TabIndex = 2;
             this.button6.Text = "Clear";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // label3
+            // total_amt
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(68, 120);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 23);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "00";
+            this.total_amt.AutoSize = true;
+            this.total_amt.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.total_amt.Location = new System.Drawing.Point(68, 120);
+            this.total_amt.Name = "total_amt";
+            this.total_amt.Size = new System.Drawing.Size(32, 23);
+            this.total_amt.TabIndex = 0;
+            this.total_amt.Text = "00";
             // 
             // label2
             // 
@@ -302,71 +373,59 @@ namespace BookStore.UC
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.button3);
-            this.panel7.Controls.Add(this.button4);
-            this.panel7.Controls.Add(this.button5);
-            this.panel7.Controls.Add(this.button2);
+            this.panel7.Controls.Add(this.btn_decrement);
+            this.panel7.Controls.Add(this.btn_delete);
+            this.panel7.Controls.Add(this.btn_increment);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 7);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(273, 37);
+            this.panel7.Size = new System.Drawing.Size(289, 37);
             this.panel7.TabIndex = 4;
             // 
-            // button3
+            // btn_decrement
             // 
-            this.button3.BackColor = System.Drawing.Color.OrangeRed;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(31, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(33, 31);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "-";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btn_decrement.BackColor = System.Drawing.Color.OrangeRed;
+            this.btn_decrement.FlatAppearance.BorderSize = 0;
+            this.btn_decrement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_decrement.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_decrement.ForeColor = System.Drawing.Color.White;
+            this.btn_decrement.Location = new System.Drawing.Point(52, 3);
+            this.btn_decrement.Name = "btn_decrement";
+            this.btn_decrement.Size = new System.Drawing.Size(33, 31);
+            this.btn_decrement.TabIndex = 2;
+            this.btn_decrement.Text = "-";
+            this.btn_decrement.UseVisualStyleBackColor = false;
+            this.btn_decrement.Click += new System.EventHandler(this.btn_decrement_Click);
             // 
-            // button4
+            // btn_delete
             // 
-            this.button4.BackColor = System.Drawing.Color.OrangeRed;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(108, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(87, 31);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Delete";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btn_delete.BackColor = System.Drawing.Color.OrangeRed;
+            this.btn_delete.FlatAppearance.BorderSize = 0;
+            this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_delete.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.ForeColor = System.Drawing.Color.White;
+            this.btn_delete.Location = new System.Drawing.Point(167, 3);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(77, 31);
+            this.btn_delete.TabIndex = 2;
+            this.btn_delete.Text = "Delete";
+            this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
-            // button5
+            // btn_increment
             // 
-            this.button5.BackColor = System.Drawing.Color.Teal;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(201, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(58, 31);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "Add";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Teal;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(69, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(33, 31);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "+";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_increment.BackColor = System.Drawing.Color.Teal;
+            this.btn_increment.FlatAppearance.BorderSize = 0;
+            this.btn_increment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_increment.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_increment.ForeColor = System.Drawing.Color.White;
+            this.btn_increment.Location = new System.Drawing.Point(101, 3);
+            this.btn_increment.Name = "btn_increment";
+            this.btn_increment.Size = new System.Drawing.Size(33, 31);
+            this.btn_increment.TabIndex = 2;
+            this.btn_increment.Text = "+";
+            this.btn_increment.UseVisualStyleBackColor = false;
+            this.btn_increment.Click += new System.EventHandler(this.btn_increment_Click);
             // 
             // panel6
             // 
@@ -374,44 +433,8 @@ namespace BookStore.UC
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(273, 7);
+            this.panel6.Size = new System.Drawing.Size(289, 7);
             this.panel6.TabIndex = 4;
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(-1, 12);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(276, 245);
-            this.listView1.TabIndex = 18;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Tracking ID";
-            this.columnHeader1.Width = 76;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Book Title";
-            this.columnHeader2.Width = 92;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Qty";
-            this.columnHeader3.Width = 47;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Amount";
-            this.columnHeader4.Width = 75;
             // 
             // SaleBooks_UC
             // 
@@ -419,13 +442,13 @@ namespace BookStore.UC
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.add_tocart);
+            this.Controls.Add(this.b_discount);
+            this.Controls.Add(this.b_id);
+            this.Controls.Add(this.b_author);
+            this.Controls.Add(this.b_publisher);
+            this.Controls.Add(this.b_price);
+            this.Controls.Add(this.b_title);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label8);
@@ -436,6 +459,7 @@ namespace BookStore.UC
             this.Name = "SaleBooks_UC";
             this.Size = new System.Drawing.Size(934, 445);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -447,13 +471,13 @@ namespace BookStore.UC
         #endregion
 
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button add_tocart;
+        private System.Windows.Forms.TextBox b_discount;
+        private System.Windows.Forms.TextBox b_id;
+        private System.Windows.Forms.TextBox b_author;
+        private System.Windows.Forms.TextBox b_publisher;
+        private System.Windows.Forms.TextBox b_price;
+        private System.Windows.Forms.TextBox b_title;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
@@ -465,18 +489,19 @@ namespace BookStore.UC
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button finalize_order;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label total_amt;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_decrement;
+        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Button btn_increment;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tracking_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Book_title;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn discount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Net_Amount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total_amount;
     }
 }

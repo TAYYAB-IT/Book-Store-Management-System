@@ -33,26 +33,26 @@ namespace BookStore.Forms
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.b_quantity = new System.Windows.Forms.TextBox();
+            this.b_title = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.b_id = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.b_cost = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.b_description = new System.Windows.Forms.RichTextBox();
+            this.b_sell = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.save_btn = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.b_author = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -95,19 +95,20 @@ namespace BookStore.Forms
             this.panel1.Size = new System.Drawing.Size(742, 10);
             this.panel1.TabIndex = 8;
             // 
-            // textBox8
+            // b_quantity
             // 
-            this.textBox8.Location = new System.Drawing.Point(470, 121);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(234, 20);
-            this.textBox8.TabIndex = 28;
+            this.b_quantity.Location = new System.Drawing.Point(470, 121);
+            this.b_quantity.Name = "b_quantity";
+            this.b_quantity.Size = new System.Drawing.Size(234, 20);
+            this.b_quantity.TabIndex = 28;
             // 
-            // textBox2
+            // b_title
             // 
-            this.textBox2.Location = new System.Drawing.Point(470, 82);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(234, 20);
-            this.textBox2.TabIndex = 29;
+            this.b_title.Location = new System.Drawing.Point(470, 82);
+            this.b_title.Name = "b_title";
+            this.b_title.Size = new System.Drawing.Size(234, 20);
+            this.b_title.TabIndex = 29;
+            this.b_title.TextChanged += new System.EventHandler(this.b_title_TextChanged);
             // 
             // label2
             // 
@@ -120,13 +121,13 @@ namespace BookStore.Forms
             this.label2.TabIndex = 23;
             this.label2.Text = "Quantity:";
             // 
-            // textBox3
+            // b_id
             // 
-            this.textBox3.Location = new System.Drawing.Point(141, 85);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(177, 20);
-            this.textBox3.TabIndex = 30;
+            this.b_id.Location = new System.Drawing.Point(141, 85);
+            this.b_id.Name = "b_id";
+            this.b_id.ReadOnly = true;
+            this.b_id.Size = new System.Drawing.Size(177, 20);
+            this.b_id.TabIndex = 30;
             // 
             // label5
             // 
@@ -193,12 +194,12 @@ namespace BookStore.Forms
             this.comboBox3.Size = new System.Drawing.Size(309, 21);
             this.comboBox3.TabIndex = 37;
             // 
-            // textBox6
+            // b_cost
             // 
-            this.textBox6.Location = new System.Drawing.Point(141, 236);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(234, 20);
-            this.textBox6.TabIndex = 36;
+            this.b_cost.Location = new System.Drawing.Point(141, 236);
+            this.b_cost.Name = "b_cost";
+            this.b_cost.Size = new System.Drawing.Size(234, 20);
+            this.b_cost.TabIndex = 36;
             // 
             // label3
             // 
@@ -222,20 +223,20 @@ namespace BookStore.Forms
             this.label9.TabIndex = 34;
             this.label9.Text = "Cost Price:";
             // 
-            // richTextBox1
+            // b_description
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(141, 282);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(563, 96);
-            this.richTextBox1.TabIndex = 43;
-            this.richTextBox1.Text = "";
+            this.b_description.Location = new System.Drawing.Point(141, 282);
+            this.b_description.Name = "b_description";
+            this.b_description.Size = new System.Drawing.Size(563, 96);
+            this.b_description.TabIndex = 43;
+            this.b_description.Text = "";
             // 
-            // textBox7
+            // b_sell
             // 
-            this.textBox7.Location = new System.Drawing.Point(525, 236);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(179, 20);
-            this.textBox7.TabIndex = 41;
+            this.b_sell.Location = new System.Drawing.Point(525, 236);
+            this.b_sell.Name = "b_sell";
+            this.b_sell.Size = new System.Drawing.Size(179, 20);
+            this.b_sell.TabIndex = 41;
             // 
             // label11
             // 
@@ -291,12 +292,12 @@ namespace BookStore.Forms
             this.save_btn.UseVisualStyleBackColor = false;
             this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
             // 
-            // textBox1
+            // b_author
             // 
-            this.textBox1.Location = new System.Drawing.Point(141, 118);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 20);
-            this.textBox1.TabIndex = 46;
+            this.b_author.Location = new System.Drawing.Point(141, 118);
+            this.b_author.Name = "b_author";
+            this.b_author.Size = new System.Drawing.Size(182, 20);
+            this.b_author.TabIndex = 46;
             // 
             // button2
             // 
@@ -348,6 +349,7 @@ namespace BookStore.Forms
             this.button4.TabIndex = 51;
             this.button4.Text = "+";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Add_Book
             // 
@@ -359,22 +361,22 @@ namespace BookStore.Forms
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.b_author);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.save_btn);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.b_description);
+            this.Controls.Add(this.b_sell);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.b_cost);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.b_quantity);
+            this.Controls.Add(this.b_title);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.b_id);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -388,6 +390,7 @@ namespace BookStore.Forms
             this.Name = "Add_Book";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_Book";
+            this.Load += new System.EventHandler(this.Add_Book_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -399,26 +402,26 @@ namespace BookStore.Forms
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox b_quantity;
+        private System.Windows.Forms.TextBox b_title;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox b_id;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox b_cost;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.RichTextBox b_description;
+        private System.Windows.Forms.TextBox b_sell;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button save_btn;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox b_author;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;

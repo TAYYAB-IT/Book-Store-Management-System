@@ -41,6 +41,7 @@ namespace BookStore
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.msg = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -89,7 +90,7 @@ namespace BookStore
             this.login.Location = new System.Drawing.Point(367, 477);
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(547, 39);
-            this.login.TabIndex = 10;
+            this.login.TabIndex = 3;
             this.login.Text = "Login";
             this.login.UseVisualStyleBackColor = false;
             this.login.Click += new System.EventHandler(this.login_Click);
@@ -101,7 +102,7 @@ namespace BookStore
             this.password.Location = new System.Drawing.Point(367, 387);
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(547, 31);
-            this.password.TabIndex = 8;
+            this.password.TabIndex = 2;
             this.password.UseSystemPasswordChar = true;
             // 
             // username
@@ -111,7 +112,7 @@ namespace BookStore
             this.username.Location = new System.Drawing.Point(367, 314);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(547, 31);
-            this.username.TabIndex = 9;
+            this.username.TabIndex = 1;
             // 
             // label3
             // 
@@ -168,12 +169,26 @@ namespace BookStore
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // msg
+            // 
+            this.msg.AutoSize = true;
+            this.msg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msg.ForeColor = System.Drawing.Color.Red;
+            this.msg.Location = new System.Drawing.Point(880, 368);
+            this.msg.Name = "msg";
+            this.msg.Size = new System.Drawing.Size(34, 16);
+            this.msg.TabIndex = 13;
+            this.msg.Text = "msg";
+            this.msg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.msg.Visible = false;
+            // 
             // Login_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(1168, 533);
+            this.Controls.Add(this.msg);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.login);
@@ -208,6 +223,7 @@ namespace BookStore
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label msg;
     }
 }
 

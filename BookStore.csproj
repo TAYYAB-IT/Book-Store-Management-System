@@ -64,11 +64,23 @@
     <Compile Include="Forms\Add_Expense.Designer.cs">
       <DependentUpon>Add_Expense.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Add_Publisher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Add_Publisher.Designer.cs">
+      <DependentUpon>Add_Publisher.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Add_Stock.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Add_Stock.Designer.cs">
       <DependentUpon>Add_Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChangePass.Designer.cs">
+      <DependentUpon>ChangePass.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Dashboard.cs">
       <SubType>Form</SubType>
@@ -135,8 +147,14 @@
     <EmbeddedResource Include="Forms\Add_Expense.resx">
       <DependentUpon>Add_Expense.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Add_Publisher.resx">
+      <DependentUpon>Add_Publisher.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Add_Stock.resx">
       <DependentUpon>Add_Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChangePass.resx">
+      <DependentUpon>ChangePass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>

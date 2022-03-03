@@ -112,5 +112,12 @@ namespace BookStore.Forms
         {
             labelDate.Text = DateTime.Now.ToString("d");
         }
+
+        private void btn_changepass_Click(object sender, EventArgs e)
+        {
+            ChangePass frm = new ChangePass();
+            frm.ShowDialog();
+           
+        }
     }
 }
