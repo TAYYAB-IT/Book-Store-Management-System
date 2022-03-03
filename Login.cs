@@ -47,7 +47,7 @@ namespace BookStore
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
+            if (show_pass.Checked)
             {
                 password.UseSystemPasswordChar = false;
             }

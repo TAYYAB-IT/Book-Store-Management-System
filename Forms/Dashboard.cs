@@ -32,15 +32,15 @@ namespace BookStore.Forms
         //Slider To represent active menu
         private void moveSidePanel(Control btn)
         {
-            panelSide.Top = btn.Top;
-            panelSide.Height = btn.Height;
+            panel_bar.Top = btn.Top;
+            panel_bar.Height = btn.Height;
         }
         //Add UC controls To PanalControl
         private void AddControlsToPanel(Control c)
         {
             c.Dock = DockStyle.Fill;
-            panelControls.Controls.Clear();
-            panelControls.Controls.Add(c);
+            panel_cng.Controls.Clear();
+            panel_cng.Controls.Add(c);
         }
 
         //Home Button

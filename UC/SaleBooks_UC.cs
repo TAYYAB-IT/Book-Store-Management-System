@@ -40,6 +40,8 @@ namespace BookStore.UC
                 if (fin_order.IsDisposed)
                 {
                     SqlDataAdapter adapter;
+                    int actual_cost = 0;
+                  
                     try
                     {
                         for (int i = 0; i < dataGridView1.Rows.Count; i++)
@@ -52,12 +54,17 @@ namespace BookStore.UC
                             adapter = new SqlDataAdapter();
                             adapter.InsertCommand = cmd;
                             adapter.InsertCommand.ExecuteNonQuery();
+                            //Add Actual_cost
+                            cmd = new SqlCommand($"Select SUM(B_costprice*{qt}) from Book where B_id={b_id}", conn);
+                            var obj = cmd.ExecuteScalar();
+                            actual_cost += (obj != null && !string.IsNullOrWhiteSpace(obj.ToString())) ? Int32.Parse(obj.ToString()) : 0;
                             conn.Close();
 
                         }
+                        
                         conn.Open();
                         int net_amt = net_amount();
-                        cmd = new SqlCommand($"Insert into Sale(net_amount,net_discount,S_date,book_quantity) values({net_amt},{net_amt - Int32.Parse(total_amt.Text)},'{DateTime.Now.ToString("d")}',{total_quantity()})", conn);
+                        cmd = new SqlCommand($"Insert into Sale(net_amount,net_discount,S_date,book_quantity,actual_cost) values({net_amt},{net_amt - Int32.Parse(total_amt.Text)},'{DateTime.Now.ToString("d")}',{total_quantity()},{actual_cost})", conn);
                         adapter = new SqlDataAdapter();
                         adapter.InsertCommand = cmd;
                         adapter.InsertCommand.ExecuteNonQuery();

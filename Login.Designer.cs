@@ -33,14 +33,14 @@ namespace BookStore
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.login = new System.Windows.Forms.Button();
+            this.btn_login = new System.Windows.Forms.Button();
             this.password = new System.Windows.Forms.TextBox();
             this.username = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.show_pass = new System.Windows.Forms.CheckBox();
             this.msg = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -70,30 +70,31 @@ namespace BookStore
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(588, 21);
+            this.label2.Location = new System.Drawing.Point(522, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(218, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "RAJUSKO Book Store";
             // 
-            // login
+            // btn_login
             // 
-            this.login.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.login.BackColor = System.Drawing.Color.Teal;
-            this.login.FlatAppearance.BorderSize = 0;
-            this.login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.login.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login.ForeColor = System.Drawing.Color.White;
-            this.login.Location = new System.Drawing.Point(367, 477);
-            this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(547, 39);
-            this.login.TabIndex = 3;
-            this.login.Text = "Login";
-            this.login.UseVisualStyleBackColor = false;
-            this.login.Click += new System.EventHandler(this.login_Click);
+            this.btn_login.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_login.BackColor = System.Drawing.Color.Teal;
+            this.btn_login.FlatAppearance.BorderSize = 0;
+            this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_login.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_login.ForeColor = System.Drawing.Color.White;
+            this.btn_login.Location = new System.Drawing.Point(367, 477);
+            this.btn_login.Name = "btn_login";
+            this.btn_login.Size = new System.Drawing.Size(547, 39);
+            this.btn_login.TabIndex = 3;
+            this.btn_login.Text = "Login";
+            this.btn_login.UseVisualStyleBackColor = false;
+            this.btn_login.Click += new System.EventHandler(this.login_Click);
             // 
             // password
             // 
@@ -150,31 +151,33 @@ namespace BookStore
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(639, 109);
+            this.pictureBox2.Location = new System.Drawing.Point(554, 109);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(167, 130);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
-            // checkBox1
+            // show_pass
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(920, 518);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(102, 17);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.Text = "Show Password";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.show_pass.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.show_pass.AutoSize = true;
+            this.show_pass.Location = new System.Drawing.Point(812, 424);
+            this.show_pass.Name = "show_pass";
+            this.show_pass.Size = new System.Drawing.Size(102, 17);
+            this.show_pass.TabIndex = 12;
+            this.show_pass.Text = "Show Password";
+            this.show_pass.UseVisualStyleBackColor = true;
+            this.show_pass.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // msg
             // 
             this.msg.AutoSize = true;
             this.msg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.msg.ForeColor = System.Drawing.Color.Red;
-            this.msg.Location = new System.Drawing.Point(880, 368);
+            this.msg.Location = new System.Drawing.Point(604, 448);
             this.msg.Name = "msg";
             this.msg.Size = new System.Drawing.Size(34, 16);
             this.msg.TabIndex = 13;
@@ -189,9 +192,9 @@ namespace BookStore
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(1168, 533);
             this.Controls.Add(this.msg);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.show_pass);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.login);
+            this.Controls.Add(this.btn_login);
             this.Controls.Add(this.password);
             this.Controls.Add(this.username);
             this.Controls.Add(this.label3);
@@ -215,14 +218,14 @@ namespace BookStore
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button login;
+        private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.TextBox password;
         private System.Windows.Forms.TextBox username;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox show_pass;
         private System.Windows.Forms.Label msg;
     }
 }
