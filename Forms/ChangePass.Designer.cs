@@ -187,6 +187,8 @@ namespace BookStore.Forms
             this.ClientSize = new System.Drawing.Size(602, 450);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ChangePass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "`";

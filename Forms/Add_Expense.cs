@@ -80,7 +80,7 @@ namespace BookStore.Forms
             else 
             {
                 e_description.Text = (!string.IsNullOrWhiteSpace(e_description.Text)) ? e_description.Text : "NULL";
-                cmd = new SqlCommand($"Insert into Expense(E_title,E_amount,E_date,E_description) values('{e_title.Text}',{e_amount.Text},'{dateTimePicker1.Value.ToString("d")}','{e_description.Text}')",conn);
+                cmd = new SqlCommand($"Insert into Expense(E_title,E_amount,E_date,E_description) values('{e_title.Text}',{e_amount.Text},'{dateTimePicker1.Value.ToString("G")}','{e_description.Text}')",conn);
                 try
                 {
                     conn.Open();

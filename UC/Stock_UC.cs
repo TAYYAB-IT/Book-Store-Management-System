@@ -17,6 +17,7 @@ namespace BookStore.UC
        
         SqlConnection conn;
         SqlCommand cmd;
+        int selected_row = -1;
         public Stock_UC()
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace BookStore.UC
             table1.Columns.Add("Quantity");
             table1.Columns.Add("Cost Price");
             table1.Columns.Add("Selling Price");
+            table1.Columns.Add("Description");
 
             dataGridView1.DataSource = this.table1;
 
@@ -63,7 +65,7 @@ namespace BookStore.UC
             {
                 this.table1.Rows.Clear();
                 conn.Open();
-                cmd = new SqlCommand("Select Book.B_id,Book.B_title,Book.B_Author,Category.C_name,Publisher.P_name,Book.B_stock,Book.B_costprice,Book.B_sellingprice From ((Book inner join Category on Category.C_Name=Book.B_category) inner join Publisher on Publisher.P_name=Book.B_publisher)", conn);
+                cmd = new SqlCommand("Select Book.B_id,Book.B_title,Book.B_Author,Category.C_name,Publisher.P_name,Book.B_stock,Book.B_costprice,Book.B_sellingprice,Book.B_description From ((Book inner join Category on Category.C_Name=Book.B_category) inner join Publisher on Publisher.P_name=Book.B_publisher)", conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
@@ -77,6 +79,7 @@ namespace BookStore.UC
                     row["Quantity"] = reader.GetValue(5);
                     row["Cost Price"] = reader.GetValue(6);
                     row["Selling Price"] = reader.GetValue(7);
+                    row["Description"] = reader.GetValue(8);
                     this.table1.Rows.Add(row);
                 }
                 
@@ -245,6 +248,36 @@ namespace BookStore.UC
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
             read_selective();
+        }
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+            if (selected_row == -1)
+            {
+                MessageBox.Show("Select First!");
+            }
+            else
+            {
+                Update_Book frm = new Update_Book(dataGridView1.Rows[selected_row].Cells[0].Value.ToString(), dataGridView1.Rows[selected_row].Cells[1].Value.ToString(), dataGridView1.Rows[selected_row].Cells[2].Value.ToString(), dataGridView1.Rows[selected_row].Cells[5].Value.ToString(), dataGridView1.Rows[selected_row].Cells[4].Value.ToString(), dataGridView1.Rows[selected_row].Cells[3].Value.ToString(), dataGridView1.Rows[selected_row].Cells[6].Value.ToString(), dataGridView1.Rows[selected_row].Cells[7].Value.ToString(), dataGridView1.Rows[selected_row].Cells[8].Value.ToString());
+
+                frm.ShowDialog();
+                selected_row = -1;
+              
+                read_data();
+              
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            foreach(DataGridViewRow row in dataGridView1.Rows)
+            {
+                row.DefaultCellStyle.BackColor = Color.White;
+            }
+
+            selected_row = e.RowIndex;
+            dataGridView1.Rows[selected_row].DefaultCellStyle.BackColor = Color.Teal;
+
         }
     }
 }

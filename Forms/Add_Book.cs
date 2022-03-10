@@ -74,8 +74,8 @@ namespace BookStore.Forms
                                 conn.Close();
                                 MessageBox.Show($"{res} New Book is Registered..");
 
-                                
-                                
+
+
                                 cmd = new SqlCommand($"SELECT IDENT_CURRENT('Book')+1", conn);
                                 conn.Open();
                                 var obj = cmd.ExecuteScalar();
@@ -84,7 +84,7 @@ namespace BookStore.Forms
                                 b_title.Text = b_author.Text = b_cost.Text = b_description.Text = b_quantity.Text = b_sell.Text = "";
                                 comboBox1.SelectedItem = null;
                                 comboBox3.SelectedItem = null;
-                                
+
 
                             }
                             catch (Exception err)
@@ -99,12 +99,12 @@ namespace BookStore.Forms
                 }
             }
             else if (!Int32.TryParse(b_quantity.Text, out m)) { MessageBox.Show("Quantity is invalid!"); }
-            
-            //else if (!Int32.TryParse(b_sell.Text, out n)) { MessageBox.Show("Selling Price invalid!"); }
-            
-          //  else if (!Int32.TryParse(b_cost.Text, out n)) { MessageBox.Show("Cost Price is invalid!"); }
 
-           
+            //else if (!Int32.TryParse(b_sell.Text, out n)) { MessageBox.Show("Selling Price invalid!"); }
+
+            //  else if (!Int32.TryParse(b_cost.Text, out n)) { MessageBox.Show("Cost Price is invalid!"); }
+
+
 
         }
         //Add new book Category
@@ -112,7 +112,7 @@ namespace BookStore.Forms
         {
             Add_Book_Category bk_cat = new Add_Book_Category();
             bk_cat.ShowDialog();
-            read_from_db();
+            read_from_db2();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -127,7 +127,7 @@ namespace BookStore.Forms
             add_publi.ShowDialog();
             read_from_db();
         }
-        
+
         //Read Publisher & Category From DB
         private void read_from_db()
         {
@@ -143,10 +143,22 @@ namespace BookStore.Forms
                     comboBox1.Items.Add(reader.GetValue(0));
                 }
                 conn.Close();
-                //ADD Saved Category in combobox
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+                conn.Close();
+            }
+
+        }
+
+        //ADD Saved Category in combobox
+        private void read_from_db2() {
+            try {
                 cmd = new SqlCommand("Select C_name from Category", conn);
                 conn.Open();
-                reader = cmd.ExecuteReader();
+                SqlDataReader reader = cmd.ExecuteReader();
                 comboBox3.Items.Clear();
                 while (reader.Read())
                 {
@@ -160,11 +172,13 @@ namespace BookStore.Forms
                 conn.Close();
             }
         }
+     
         private void Add_Book_Load(object sender, EventArgs e)
 
         {
 
             read_from_db();
+            read_from_db2();
             try
             {
                 conn.Open();

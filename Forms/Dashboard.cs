@@ -119,5 +119,11 @@ namespace BookStore.Forms
             frm.ShowDialog();
            
         }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            Report rp_frm = new Report();
+            rp_frm.ShowDialog();
+        }
     }
 }

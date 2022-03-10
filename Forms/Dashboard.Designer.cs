@@ -52,6 +52,7 @@ namespace BookStore.Forms
             this.panel_cng = new System.Windows.Forms.Panel();
             this.panel_bar = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnReport = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btn_changepass = new System.Windows.Forms.Button();
             this.labelDate = new System.Windows.Forms.Label();
@@ -62,6 +63,7 @@ namespace BookStore.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -331,10 +333,28 @@ namespace BookStore.Forms
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.Controls.Add(this.btnReport);
             this.panel1.Location = new System.Drawing.Point(0, 530);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(215, 226);
             this.panel1.TabIndex = 15;
+            // 
+            // btnReport
+            // 
+            this.btnReport.BackColor = System.Drawing.Color.Teal;
+            this.btnReport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReport.FlatAppearance.BorderSize = 0;
+            this.btnReport.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.ForeColor = System.Drawing.Color.White;
+            this.btnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReport.Location = new System.Drawing.Point(0, 3);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(215, 60);
+            this.btnReport.TabIndex = 18;
+            this.btnReport.Text = "Report";
+            this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // panel5
             // 
@@ -416,6 +436,7 @@ namespace BookStore.Forms
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.btnSaleBooks);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
@@ -428,6 +449,7 @@ namespace BookStore.Forms
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.ResumeLayout(false);
@@ -463,5 +485,6 @@ namespace BookStore.Forms
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label labelDate;
         private System.Windows.Forms.Button btn_changepass;
+        private System.Windows.Forms.Button btnReport;
     }
 }

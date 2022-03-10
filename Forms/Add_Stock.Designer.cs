@@ -48,6 +48,8 @@ namespace BookStore.Forms
             this.b_id = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.b_title = new System.Windows.Forms.TextBox();
+            this.bk_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panel2
@@ -195,7 +197,7 @@ namespace BookStore.Forms
             // 
             // e_stock
             // 
-            this.e_stock.Location = new System.Drawing.Point(189, 113);
+            this.e_stock.Location = new System.Drawing.Point(189, 120);
             this.e_stock.Name = "e_stock";
             this.e_stock.ReadOnly = true;
             this.e_stock.Size = new System.Drawing.Size(213, 20);
@@ -206,7 +208,7 @@ namespace BookStore.Forms
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(67, 118);
+            this.label1.Location = new System.Drawing.Point(69, 118);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 19);
             this.label1.TabIndex = 29;
@@ -214,7 +216,7 @@ namespace BookStore.Forms
             // 
             // b_id
             // 
-            this.b_id.Location = new System.Drawing.Point(189, 71);
+            this.b_id.Location = new System.Drawing.Point(189, 61);
             this.b_id.Name = "b_id";
             this.b_id.Size = new System.Drawing.Size(213, 20);
             this.b_id.TabIndex = 37;
@@ -225,7 +227,7 @@ namespace BookStore.Forms
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Teal;
-            this.label6.Location = new System.Drawing.Point(82, 75);
+            this.label6.Location = new System.Drawing.Point(75, 59);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(99, 19);
             this.label6.TabIndex = 30;
@@ -243,12 +245,33 @@ namespace BookStore.Forms
             this.label4.TabIndex = 31;
             this.label4.Text = "Add Stock";
             // 
+            // b_title
+            // 
+            this.b_title.Location = new System.Drawing.Point(189, 91);
+            this.b_title.Name = "b_title";
+            this.b_title.ReadOnly = true;
+            this.b_title.Size = new System.Drawing.Size(213, 20);
+            this.b_title.TabIndex = 41;
+            // 
+            // bk_label
+            // 
+            this.bk_label.AutoSize = true;
+            this.bk_label.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bk_label.ForeColor = System.Drawing.Color.Teal;
+            this.bk_label.Location = new System.Drawing.Point(75, 92);
+            this.bk_label.Name = "bk_label";
+            this.bk_label.Size = new System.Drawing.Size(80, 19);
+            this.bk_label.TabIndex = 40;
+            this.bk_label.Text = "Book Title";
+            // 
             // Add_Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(491, 372);
             this.ControlBox = false;
+            this.Controls.Add(this.b_title);
+            this.Controls.Add(this.bk_label);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnsave);
             this.Controls.Add(this.t_stock);
@@ -300,5 +323,7 @@ namespace BookStore.Forms
         private System.Windows.Forms.TextBox b_id;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox b_title;
+        private System.Windows.Forms.Label bk_label;
     }
 }

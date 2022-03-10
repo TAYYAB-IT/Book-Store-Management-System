@@ -38,8 +38,9 @@ namespace BookStore.UC
             int n = 0;
             try
             {
+                dataGridView1.Rows.Clear();
                 conn.Open();
-                cmd = new SqlCommand("Select S_id,net_amount,net_discount,net_amount-net_discount AS total_amount,S_date From Sale Order BY S_date desc ", conn);
+                cmd = new SqlCommand($"Select S_id,net_amount,net_discount,net_amount-net_discount AS total_amount,S_date From Sale where MONTH(S_date)={dateTimePicker1.Value.Month} AND YEAR(S_date)={dateTimePicker1.Value.Year} Order BY S_date desc ", conn);
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
@@ -59,8 +60,8 @@ namespace BookStore.UC
         private void button1_Click(object sender, EventArgs e)
         {
             checkBox1.Checked = true;
-            dateTimePicker1.Visible=false;
-            dataGridView1.Rows.Clear();
+           // dateTimePicker1.Visible=false;
+            //dataGridView1.Rows.Clear();
             read_expenses();
 
         }
@@ -94,7 +95,7 @@ namespace BookStore.UC
         {
             if (checkBox1.Checked)
             {
-                dateTimePicker1.Visible = false;
+                //dateTimePicker1.Visible = false;
                 dataGridView1.Rows.Clear();
                 read_expenses();
             }
@@ -111,7 +112,16 @@ namespace BookStore.UC
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             DateTime dt = dateTimePicker1.Value;
-            read_expenses(dt.ToString("d"));
+            if (!checkBox1.Checked)
+            {
+                read_expenses(dt.ToString("d")); //by date
+            }
+            else
+            {
+                read_expenses(); // by month
+            }
         }
+
+       
     }
 }
