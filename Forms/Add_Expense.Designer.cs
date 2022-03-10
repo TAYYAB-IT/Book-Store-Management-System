@@ -30,13 +30,13 @@ namespace BookStore.Forms
         private void InitializeComponent()
         {
             this.label4 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.e_description = new System.Windows.Forms.RichTextBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnsave = new System.Windows.Forms.Button();
+            this.e_amount = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.e_title = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -58,13 +58,13 @@ namespace BookStore.Forms
             this.label4.TabIndex = 39;
             this.label4.Text = "Add New Expense";
             // 
-            // richTextBox1
+            // e_description
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(138, 195);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(213, 96);
-            this.richTextBox1.TabIndex = 38;
-            this.richTextBox1.Text = "";
+            this.e_description.Location = new System.Drawing.Point(138, 195);
+            this.e_description.Name = "e_description";
+            this.e_description.Size = new System.Drawing.Size(213, 96);
+            this.e_description.TabIndex = 38;
+            this.e_description.Text = "";
             // 
             // button3
             // 
@@ -82,27 +82,29 @@ namespace BookStore.Forms
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button1
+            // btnsave
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.Color.SeaGreen;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(239, 297);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 38);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnsave.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnsave.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnsave.FlatAppearance.BorderSize = 0;
+            this.btnsave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsave.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsave.ForeColor = System.Drawing.Color.White;
+            this.btnsave.Location = new System.Drawing.Point(239, 297);
+            this.btnsave.Name = "btnsave";
+            this.btnsave.Size = new System.Drawing.Size(112, 38);
+            this.btnsave.TabIndex = 36;
+            this.btnsave.Text = "Save";
+            this.btnsave.UseVisualStyleBackColor = false;
+            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
             // 
-            // textBox1
+            // e_amount
             // 
-            this.textBox1.Location = new System.Drawing.Point(138, 110);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 20);
-            this.textBox1.TabIndex = 34;
+            this.e_amount.Location = new System.Drawing.Point(138, 110);
+            this.e_amount.Name = "e_amount";
+            this.e_amount.Size = new System.Drawing.Size(213, 20);
+            this.e_amount.TabIndex = 34;
+            this.e_amount.TextChanged += new System.EventHandler(this.e_amount_TextChanged);
             // 
             // label3
             // 
@@ -126,12 +128,13 @@ namespace BookStore.Forms
             this.label1.TabIndex = 32;
             this.label1.Text = "Amount:";
             // 
-            // textBox3
+            // e_title
             // 
-            this.textBox3.Location = new System.Drawing.Point(138, 70);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(213, 20);
-            this.textBox3.TabIndex = 35;
+            this.e_title.Location = new System.Drawing.Point(138, 70);
+            this.e_title.Name = "e_title";
+            this.e_title.Size = new System.Drawing.Size(213, 20);
+            this.e_title.TabIndex = 35;
+            this.e_title.TextChanged += new System.EventHandler(this.e_title_TextChanged);
             // 
             // label2
             // 
@@ -212,13 +215,13 @@ namespace BookStore.Forms
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.e_description);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnsave);
+            this.Controls.Add(this.e_amount);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.e_title);
             this.Controls.Add(this.label2);
             this.Name = "Add_Expense";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -231,13 +234,13 @@ namespace BookStore.Forms
         #endregion
 
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox e_description;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnsave;
+        private System.Windows.Forms.TextBox e_amount;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox e_title;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;

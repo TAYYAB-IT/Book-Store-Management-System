@@ -33,28 +33,34 @@ namespace BookStore.UC
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.sold_books = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.purchased_books = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.customers = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.this_monthsale = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.this_monthexpense = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -74,7 +80,7 @@ namespace BookStore.UC
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.SeaGreen;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.sold_books);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(139, 149);
             this.panel1.Name = "panel1";
@@ -91,16 +97,16 @@ namespace BookStore.UC
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // label4
+            // sold_books
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(40, 50);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 23);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "1000";
+            this.sold_books.AutoSize = true;
+            this.sold_books.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sold_books.ForeColor = System.Drawing.Color.White;
+            this.sold_books.Location = new System.Drawing.Point(40, 50);
+            this.sold_books.Name = "sold_books";
+            this.sold_books.Size = new System.Drawing.Size(54, 23);
+            this.sold_books.TabIndex = 0;
+            this.sold_books.Text = "1000";
             // 
             // label3
             // 
@@ -118,23 +124,33 @@ namespace BookStore.UC
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.Crimson;
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.purchased_books);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Location = new System.Drawing.Point(410, 149);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(236, 102);
             this.panel2.TabIndex = 3;
             // 
-            // label5
+            // pictureBox2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(43, 50);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 23);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "1234";
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(165, 19);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(57, 59);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // purchased_books
+            // 
+            this.purchased_books.AutoSize = true;
+            this.purchased_books.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.purchased_books.ForeColor = System.Drawing.Color.White;
+            this.purchased_books.Location = new System.Drawing.Point(54, 50);
+            this.purchased_books.Name = "purchased_books";
+            this.purchased_books.Size = new System.Drawing.Size(54, 23);
+            this.purchased_books.TabIndex = 0;
+            this.purchased_books.Text = "1234";
             // 
             // label6
             // 
@@ -152,7 +168,7 @@ namespace BookStore.UC
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.customers);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Location = new System.Drawing.Point(687, 149);
             this.panel3.Name = "panel3";
@@ -169,16 +185,16 @@ namespace BookStore.UC
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             // 
-            // label7
+            // customers
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(41, 50);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 23);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "512";
+            this.customers.AutoSize = true;
+            this.customers.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customers.ForeColor = System.Drawing.Color.White;
+            this.customers.Location = new System.Drawing.Point(46, 50);
+            this.customers.Name = "customers";
+            this.customers.Size = new System.Drawing.Size(43, 23);
+            this.customers.TabIndex = 0;
+            this.customers.Text = "512";
             // 
             // label8
             // 
@@ -196,9 +212,9 @@ namespace BookStore.UC
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel4.BackColor = System.Drawing.Color.DarkCyan;
             this.panel4.Controls.Add(this.pictureBox4);
-            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.this_monthsale);
             this.panel4.Controls.Add(this.label9);
-            this.panel4.Location = new System.Drawing.Point(410, 294);
+            this.panel4.Location = new System.Drawing.Point(556, 294);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(236, 102);
             this.panel4.TabIndex = 5;
@@ -213,16 +229,16 @@ namespace BookStore.UC
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
             // 
-            // label1
+            // this_monthsale
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(41, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "512";
+            this.this_monthsale.AutoSize = true;
+            this.this_monthsale.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.this_monthsale.ForeColor = System.Drawing.Color.White;
+            this.this_monthsale.Location = new System.Drawing.Point(65, 49);
+            this.this_monthsale.Name = "this_monthsale";
+            this.this_monthsale.Size = new System.Drawing.Size(43, 23);
+            this.this_monthsale.TabIndex = 0;
+            this.this_monthsale.Text = "512";
             // 
             // label9
             // 
@@ -235,21 +251,56 @@ namespace BookStore.UC
             this.label9.TabIndex = 0;
             this.label9.Text = "This Month Sale:";
             // 
-            // pictureBox2
+            // panel5
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(165, 19);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(57, 59);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel5.BackColor = System.Drawing.Color.OrangeRed;
+            this.panel5.Controls.Add(this.pictureBox5);
+            this.panel5.Controls.Add(this.this_monthexpense);
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.Location = new System.Drawing.Point(272, 294);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(236, 102);
+            this.panel5.TabIndex = 6;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(176, 26);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(57, 59);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 3;
+            this.pictureBox5.TabStop = false;
+            // 
+            // this_monthexpense
+            // 
+            this.this_monthexpense.AutoSize = true;
+            this.this_monthexpense.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.this_monthexpense.ForeColor = System.Drawing.Color.White;
+            this.this_monthexpense.Location = new System.Drawing.Point(65, 49);
+            this.this_monthexpense.Name = "this_monthexpense";
+            this.this_monthexpense.Size = new System.Drawing.Size(43, 23);
+            this.this_monthexpense.TabIndex = 0;
+            this.this_monthexpense.Text = "512";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(13, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(166, 19);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "This Month Expenses:";
             // 
             // Home_UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -257,18 +308,22 @@ namespace BookStore.UC
             this.Controls.Add(this.label2);
             this.Name = "Home_UC";
             this.Size = new System.Drawing.Size(934, 445);
+            this.Load += new System.EventHandler(this.Home_UC_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,19 +334,23 @@ namespace BookStore.UC
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label sold_books;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label purchased_books;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label customers;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label this_monthsale;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label this_monthexpense;
+        private System.Windows.Forms.Label label4;
     }
 }

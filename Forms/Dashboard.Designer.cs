@@ -37,9 +37,9 @@ namespace BookStore.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.labelTime = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.labelTime = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
@@ -49,14 +49,15 @@ namespace BookStore.Forms
             this.btnExpense = new System.Windows.Forms.Button();
             this.btnViewSales = new System.Windows.Forms.Button();
             this.logout_button = new System.Windows.Forms.Button();
-            this.panelControls = new System.Windows.Forms.Panel();
-            this.panelSide = new System.Windows.Forms.Panel();
+            this.panel_cng = new System.Windows.Forms.Panel();
+            this.panel_bar = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btn_changepass = new System.Windows.Forms.Button();
+            this.labelDate = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.labelDate = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -133,18 +134,6 @@ namespace BookStore.Forms
             this.panel2.Size = new System.Drawing.Size(1162, 137);
             this.panel2.TabIndex = 5;
             // 
-            // labelTime
-            // 
-            this.labelTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelTime.AutoSize = true;
-            this.labelTime.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTime.ForeColor = System.Drawing.Color.White;
-            this.labelTime.Location = new System.Drawing.Point(46, 131);
-            this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(83, 19);
-            this.labelTime.TabIndex = 0;
-            this.labelTime.Text = "HH:MM:SS";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -167,6 +156,19 @@ namespace BookStore.Forms
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome:";
             // 
+            // labelTime
+            // 
+            this.labelTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTime.AutoSize = true;
+            this.labelTime.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.labelTime.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTime.ForeColor = System.Drawing.Color.White;
+            this.labelTime.Location = new System.Drawing.Point(46, 131);
+            this.labelTime.Name = "labelTime";
+            this.labelTime.Size = new System.Drawing.Size(83, 19);
+            this.labelTime.TabIndex = 0;
+            this.labelTime.Text = "HH:MM:SS";
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.label4);
@@ -188,6 +190,7 @@ namespace BookStore.Forms
             // 
             // button9
             // 
+            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -195,9 +198,9 @@ namespace BookStore.Forms
             this.button9.ForeColor = System.Drawing.Color.White;
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(162, 0);
+            this.button9.Location = new System.Drawing.Point(143, 0);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(53, 55);
+            this.button9.Size = new System.Drawing.Size(59, 43);
             this.button9.TabIndex = 2;
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = true;
@@ -206,8 +209,8 @@ namespace BookStore.Forms
             // btnSaleBooks
             // 
             this.btnSaleBooks.BackColor = System.Drawing.Color.Teal;
+            this.btnSaleBooks.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSaleBooks.FlatAppearance.BorderSize = 0;
-            this.btnSaleBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaleBooks.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaleBooks.ForeColor = System.Drawing.Color.White;
             this.btnSaleBooks.Image = ((System.Drawing.Image)(resources.GetObject("btnSaleBooks.Image")));
@@ -224,8 +227,8 @@ namespace BookStore.Forms
             // btnHome
             // 
             this.btnHome.BackColor = System.Drawing.Color.Teal;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
@@ -242,8 +245,8 @@ namespace BookStore.Forms
             // btnStock
             // 
             this.btnStock.BackColor = System.Drawing.Color.Teal;
+            this.btnStock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStock.FlatAppearance.BorderSize = 0;
-            this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStock.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStock.ForeColor = System.Drawing.Color.White;
             this.btnStock.Image = ((System.Drawing.Image)(resources.GetObject("btnStock.Image")));
@@ -260,8 +263,8 @@ namespace BookStore.Forms
             // btnExpense
             // 
             this.btnExpense.BackColor = System.Drawing.Color.Teal;
+            this.btnExpense.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExpense.FlatAppearance.BorderSize = 0;
-            this.btnExpense.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExpense.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExpense.ForeColor = System.Drawing.Color.White;
             this.btnExpense.Image = ((System.Drawing.Image)(resources.GetObject("btnExpense.Image")));
@@ -278,8 +281,8 @@ namespace BookStore.Forms
             // btnViewSales
             // 
             this.btnViewSales.BackColor = System.Drawing.Color.Teal;
+            this.btnViewSales.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnViewSales.FlatAppearance.BorderSize = 0;
-            this.btnViewSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewSales.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewSales.ForeColor = System.Drawing.Color.White;
             this.btnViewSales.Image = ((System.Drawing.Image)(resources.GetObject("btnViewSales.Image")));
@@ -296,8 +299,8 @@ namespace BookStore.Forms
             // logout_button
             // 
             this.logout_button.BackColor = System.Drawing.Color.Teal;
+            this.logout_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logout_button.FlatAppearance.BorderSize = 0;
-            this.logout_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logout_button.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logout_button.ForeColor = System.Drawing.Color.White;
             this.logout_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -310,20 +313,20 @@ namespace BookStore.Forms
             this.logout_button.UseVisualStyleBackColor = false;
             this.logout_button.Click += new System.EventHandler(this.logout_button_Click);
             // 
-            // panelControls
+            // panel_cng
             // 
-            this.panelControls.Location = new System.Drawing.Point(215, 182);
-            this.panelControls.Name = "panelControls";
-            this.panelControls.Size = new System.Drawing.Size(960, 466);
-            this.panelControls.TabIndex = 13;
+            this.panel_cng.Location = new System.Drawing.Point(215, 182);
+            this.panel_cng.Name = "panel_cng";
+            this.panel_cng.Size = new System.Drawing.Size(960, 466);
+            this.panel_cng.TabIndex = 13;
             // 
-            // panelSide
+            // panel_bar
             // 
-            this.panelSide.BackColor = System.Drawing.Color.White;
-            this.panelSide.Location = new System.Drawing.Point(193, 195);
-            this.panelSide.Name = "panelSide";
-            this.panelSide.Size = new System.Drawing.Size(10, 47);
-            this.panelSide.TabIndex = 14;
+            this.panel_bar.BackColor = System.Drawing.Color.White;
+            this.panel_bar.Location = new System.Drawing.Point(199, 192);
+            this.panel_bar.Name = "panel_bar";
+            this.panel_bar.Size = new System.Drawing.Size(10, 47);
+            this.panel_bar.TabIndex = 14;
             // 
             // panel1
             // 
@@ -336,6 +339,7 @@ namespace BookStore.Forms
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Teal;
+            this.panel5.Controls.Add(this.btn_changepass);
             this.panel5.Controls.Add(this.labelTime);
             this.panel5.Controls.Add(this.labelDate);
             this.panel5.Controls.Add(this.button9);
@@ -343,6 +347,36 @@ namespace BookStore.Forms
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(202, 756);
             this.panel5.TabIndex = 16;
+            // 
+            // btn_changepass
+            // 
+            this.btn_changepass.BackColor = System.Drawing.Color.Teal;
+            this.btn_changepass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_changepass.FlatAppearance.BorderSize = 0;
+            this.btn_changepass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_changepass.ForeColor = System.Drawing.Color.White;
+            this.btn_changepass.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_changepass.Location = new System.Drawing.Point(13, 530);
+            this.btn_changepass.Name = "btn_changepass";
+            this.btn_changepass.Size = new System.Drawing.Size(171, 60);
+            this.btn_changepass.TabIndex = 18;
+            this.btn_changepass.Text = "  Change Password";
+            this.btn_changepass.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_changepass.UseVisualStyleBackColor = false;
+            this.btn_changepass.Click += new System.EventHandler(this.btn_changepass_Click);
+            // 
+            // labelDate
+            // 
+            this.labelDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelDate.AutoSize = true;
+            this.labelDate.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.labelDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDate.ForeColor = System.Drawing.Color.White;
+            this.labelDate.Location = new System.Drawing.Point(46, 75);
+            this.labelDate.Name = "labelDate";
+            this.labelDate.Size = new System.Drawing.Size(93, 19);
+            this.labelDate.TabIndex = 1;
+            this.labelDate.Text = "DD-MM-YY";
             // 
             // panel6
             // 
@@ -361,18 +395,6 @@ namespace BookStore.Forms
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // labelDate
-            // 
-            this.labelDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelDate.AutoSize = true;
-            this.labelDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDate.ForeColor = System.Drawing.Color.White;
-            this.labelDate.Location = new System.Drawing.Point(46, 75);
-            this.labelDate.Name = "labelDate";
-            this.labelDate.Size = new System.Drawing.Size(93, 19);
-            this.labelDate.TabIndex = 1;
-            this.labelDate.Text = "DD-MM-YY";
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -382,9 +404,9 @@ namespace BookStore.Forms
             this.ControlBox = false;
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panelControls);
+            this.Controls.Add(this.panel_cng);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panelSide);
+            this.Controls.Add(this.panel_bar);
             this.Controls.Add(this.logout_button);
             this.Controls.Add(this.btnViewSales);
             this.Controls.Add(this.btnExpense);
@@ -432,13 +454,14 @@ namespace BookStore.Forms
         private System.Windows.Forms.Button btnExpense;
         private System.Windows.Forms.Button btnViewSales;
         private System.Windows.Forms.Button logout_button;
-        private System.Windows.Forms.Panel panelControls;
-        private System.Windows.Forms.Panel panelSide;
+        private System.Windows.Forms.Panel panel_cng;
+        private System.Windows.Forms.Panel panel_bar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label labelDate;
+        private System.Windows.Forms.Button btn_changepass;
     }
 }

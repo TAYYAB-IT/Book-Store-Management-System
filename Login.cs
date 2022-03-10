@@ -8,13 +8,36 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BookStore.Forms;
+using System.IO;
 namespace BookStore
 {
     public partial class Login_Page : Form
     {
+        string path; 
         public Login_Page()
         {
             InitializeComponent();
+            try
+            {
+                path = Directory.GetCurrentDirectory() + @"\admin.txt";
+
+                if (!File.Exists(path))
+                {
+                    MessageBox.Show("created");
+                    FileStream fs = File.Open(path, FileMode.Create);
+                    using (StreamWriter sw = new StreamWriter(fs))
+                    {
+                        sw.WriteLine("admin");
+                        sw.WriteLine("admin");
+                    }
+
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -24,7 +47,7 @@ namespace BookStore
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
+            if (show_pass.Checked)
             {
                 password.UseSystemPasswordChar = false;
             }
@@ -36,11 +59,48 @@ namespace BookStore
 
         private void login_Click(object sender, EventArgs e)
         {
-            Dashboard dash = new Dashboard();
-            
-                dash.Show();
-                this.Hide();
-            
-        }
+            string user_name = "", pass = "";
+            try {
+                FileStream fs = File.Open(path, FileMode.Open);
+                using (StreamReader sr = new StreamReader(fs))
+                {
+                    while (!sr.EndOfStream)
+                    {
+
+                        user_name = sr.ReadLine();
+                        pass = sr.ReadLine();
+                    }
+                }
+                if (username.Text == user_name)
+                {
+                    if (password.Text == pass)
+                    {
+                        msg.Visible = false;
+                        Dashboard dash = new Dashboard();
+                        dash.Show();
+                        this.Hide();
+
+                    }
+                    else
+                    {
+                        password.Focus();
+                        msg.Text = "Invalid Password";
+                        msg.Visible = true;
+                    }
+                }
+                else
+                {
+                    username.Focus();
+                    msg.Text = "Invalid Username";
+                    msg.Visible = true;
+                }
+            }
+            catch(Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+
+     }
+       
     }
 }
