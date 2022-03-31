@@ -95,6 +95,12 @@
     <Compile Include="Forms\Add_Stock.Designer.cs">
       <DependentUpon>Add_Stock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Bill_print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bill_print.Designer.cs">
+      <DependentUpon>Bill_print.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ChangePass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,14 @@
     </Compile>
     <Compile Include="Forms\Confirm_logout.Designer.cs">
       <DependentUpon>Confirm_logout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Forms\Finalize_Order.cs">
       <SubType>Form</SubType>
@@ -184,6 +198,9 @@
     <EmbeddedResource Include="Forms\Add_Stock.resx">
       <DependentUpon>Add_Stock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bill_print.resx">
+      <DependentUpon>Bill_print.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ChangePass.resx">
       <DependentUpon>ChangePass.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +231,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reports\Report1.rdlc" />
     <EmbeddedResource Include="UC\Expenses_UC.resx">
       <DependentUpon>Expenses_UC.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,7 +247,19 @@
     <EmbeddedResource Include="UC\ViewSales_UC.resx">
       <DependentUpon>ViewSales_UC.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Forms\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Forms\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Forms\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BookStore.Forms.DataSet1.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -242,6 +272,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

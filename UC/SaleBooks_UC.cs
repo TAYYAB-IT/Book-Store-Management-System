@@ -69,6 +69,8 @@ namespace BookStore.UC
                         adapter.InsertCommand = cmd;
                         adapter.InsertCommand.ExecuteNonQuery();
                         conn.Close();
+                        Form Bill_print = new Bill_print(dataGridView1);
+                        Bill_print.Show();
                         dataGridView1.Rows.Clear();
                         this.total_amt.Text = "00";
                         b_id.Text = b_author.Text = b_price.Text = b_publisher.Text = b_title.Text = "";
