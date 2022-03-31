@@ -201,6 +201,7 @@ namespace BookStore
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login_Page";
             this.Text = "Login";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

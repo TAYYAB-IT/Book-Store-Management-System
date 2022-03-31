@@ -64,11 +64,13 @@ namespace BookStore.UC
                         
                         conn.Open();
                         int net_amt = net_amount();
-                        cmd = new SqlCommand($"Insert into Sale(net_amount,net_discount,S_date,book_quantity,actual_cost) values({net_amt},{net_amt - Int32.Parse(total_amt.Text)},'{DateTime.Now.ToString("d")}',{total_quantity()},{actual_cost})", conn);
+                        cmd = new SqlCommand($"Insert into Sale(net_amount,net_discount,S_date,book_quantity,actual_cost) values({net_amt},{net_amt - Int32.Parse(total_amt.Text)},'{DateTime.Now.ToString("G")}',{total_quantity()},{actual_cost})", conn);
                         adapter = new SqlDataAdapter();
                         adapter.InsertCommand = cmd;
                         adapter.InsertCommand.ExecuteNonQuery();
                         conn.Close();
+                        Form Bill_print = new Bill_print(dataGridView1);
+                        Bill_print.Show();
                         dataGridView1.Rows.Clear();
                         this.total_amt.Text = "00";
                         b_id.Text = b_author.Text = b_price.Text = b_publisher.Text = b_title.Text = "";
@@ -137,7 +139,7 @@ namespace BookStore.UC
                             b_price.Text = reader.GetValue(3).ToString();
                             if (!string.IsNullOrWhiteSpace(b_discount.Text))
                             {
-                                if (Int32.Parse(b_discount.Text) >= (int)reader.GetValue(4))
+                                if (Int32.Parse(b_discount.Text) >=(int)reader.GetValue(3)-(int)reader.GetValue(4))
                                 {
                                     b_discount.ForeColor = Color.Red;
                                     add_tocart.Enabled = false;

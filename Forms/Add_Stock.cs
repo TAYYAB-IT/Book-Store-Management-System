@@ -42,7 +42,7 @@ namespace BookStore.Forms
             if (string.IsNullOrWhiteSpace(b_id.Text))
             {
                 btnsave.Enabled = false;
-                e_stock.Text = t_stock.Text = "";
+               b_title.Text= e_stock.Text = t_stock.Text = "";
             }
             else
             {
@@ -63,16 +63,18 @@ namespace BookStore.Forms
                     {
                         b_id.ForeColor = Color.Black;
                         btnsave.Enabled = true;
-                        cmd = new SqlCommand($"Select B_stock from Book where B_id={b_id.Text}", conn);
+                        cmd = new SqlCommand($"Select B_stock,B_title from Book where B_id={b_id.Text}", conn);
                         conn.Open();
                         SqlDataReader reader = cmd.ExecuteReader();
 
                         while (reader.Read())
                         {
                             e_stock.Text = reader.GetValue(0).ToString();
+                            b_title.Text = reader.GetValue(1).ToString();
                             if (!string.IsNullOrWhiteSpace(n_stock.Text))
                             {
                                 t_stock.Text = $"{Int32.Parse(e_stock.Text) + Int32.Parse(n_stock.Text)}";
+                               
                             }
                         }
                         conn.Close();
@@ -117,7 +119,7 @@ namespace BookStore.Forms
                             int res = adapter.UpdateCommand.ExecuteNonQuery();
                             conn.Close();
                             MessageBox.Show($"{res} Existing Book Stock Added..");
-                            b_id.Text = b_sell.Text = b_cost.Text = t_stock.Text = e_stock.Text = n_stock.Text = "";
+                            b_id.Text =b_title.Text= b_sell.Text = b_cost.Text = t_stock.Text = e_stock.Text = n_stock.Text = "";
                         }
                         catch(Exception err)
                         {

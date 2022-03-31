@@ -71,7 +71,7 @@ namespace BookStore
                         pass = sr.ReadLine();
                     }
                 }
-                if (username.Text == user_name)
+                if (username.Text.Trim() == user_name)
                 {
                     if (password.Text == pass)
                     {

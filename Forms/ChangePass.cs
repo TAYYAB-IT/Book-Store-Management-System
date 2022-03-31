@@ -40,7 +40,7 @@ namespace BookStore.Forms
                 }
                 if (old_pass.Text == pass)
                 {
-                    if (new_pass.Text.Trim().Length > 5)
+                    if (new_pass.Text.Trim().Length >=5)
                     {
                         if (File.Exists(path))
                         {

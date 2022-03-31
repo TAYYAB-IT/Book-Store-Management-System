@@ -34,6 +34,7 @@ namespace BookStore.UC
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btn_update = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -47,6 +48,7 @@ namespace BookStore.UC
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Teal;
+            this.panel5.Controls.Add(this.btn_update);
             this.panel5.Controls.Add(this.textBox7);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.comboBox2);
@@ -56,6 +58,24 @@ namespace BookStore.UC
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(959, 70);
             this.panel5.TabIndex = 6;
+            // 
+            // btn_update
+            // 
+            this.btn_update.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_update.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_update.FlatAppearance.BorderSize = 0;
+            this.btn_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_update.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_update.ForeColor = System.Drawing.Color.White;
+            this.btn_update.Image = ((System.Drawing.Image)(resources.GetObject("btn_update.Image")));
+            this.btn_update.Location = new System.Drawing.Point(356, 0);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(155, 70);
+            this.btn_update.TabIndex = 7;
+            this.btn_update.Text = "Update";
+            this.btn_update.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // textBox7
             // 
@@ -162,9 +182,10 @@ namespace BookStore.UC
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView1.Size = new System.Drawing.Size(934, 337);
             this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Stock_UC
             // 
@@ -191,5 +212,6 @@ namespace BookStore.UC
         private System.Windows.Forms.Button btnAddNewBooks;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btn_update;
     }
 }

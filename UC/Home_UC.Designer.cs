@@ -234,7 +234,7 @@ namespace BookStore.UC
             this.this_monthsale.AutoSize = true;
             this.this_monthsale.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.this_monthsale.ForeColor = System.Drawing.Color.White;
-            this.this_monthsale.Location = new System.Drawing.Point(65, 49);
+            this.this_monthsale.Location = new System.Drawing.Point(47, 49);
             this.this_monthsale.Name = "this_monthsale";
             this.this_monthsale.Size = new System.Drawing.Size(43, 23);
             this.this_monthsale.TabIndex = 0;
@@ -278,7 +278,7 @@ namespace BookStore.UC
             this.this_monthexpense.AutoSize = true;
             this.this_monthexpense.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.this_monthexpense.ForeColor = System.Drawing.Color.White;
-            this.this_monthexpense.Location = new System.Drawing.Point(65, 49);
+            this.this_monthexpense.Location = new System.Drawing.Point(32, 49);
             this.this_monthexpense.Name = "this_monthexpense";
             this.this_monthexpense.Size = new System.Drawing.Size(43, 23);
             this.this_monthexpense.TabIndex = 0;

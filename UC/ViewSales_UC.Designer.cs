@@ -65,11 +65,11 @@ namespace BookStore.UC
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkBox1.Location = new System.Drawing.Point(654, 28);
+            this.checkBox1.Location = new System.Drawing.Point(643, 28);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(37, 17);
+            this.checkBox1.Size = new System.Drawing.Size(66, 17);
             this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "All";
+            this.checkBox1.Text = "MONTH";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 

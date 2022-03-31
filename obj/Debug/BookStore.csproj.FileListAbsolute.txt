@@ -44,3 +44,144 @@ E:\5th\Projects\C# Project\BookStore\obj\Debug\BookStore.exe
 E:\5th\Projects\C# Project\BookStore\obj\Debug\BookStore.pdb
 E:\5th\Projects\C# Project\BookStore\obj\Debug\BookStore.Forms.Add_Publisher.resources
 E:\5th\Projects\C# Project\BookStore\obj\Debug\BookStore.Forms.ChangePass.resources
+E:\5th\Projects\C# Project\BookStore\bin\Debug\Microsoft.ReportViewer.Common.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\Microsoft.ReportViewer.Design.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\Microsoft.SqlServer.Types.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\EnvDTE.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\stdole.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\Microsoft.MSXML.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+E:\5th\Projects\C# Project\BookStore\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+E:\5th\Projects\C# Project\BookStore\obj\Debug\BookStore.csproj.CopyComplete
+E:\5th\Projects\C# Project\BookStore\obj\Debug\BookStore.Forms.Report.resources
+E:\5th\Projects\C# Project\BookStore\obj\Debug\BookStore.Forms.Update_Book.resources
+E:\5th\C#\BookStore\obj\Debug\BookStore.csproj.AssemblyReference.cache
+E:\5th\C#\BookStore\obj\Debug\BookStore.Forms.Add_Book.resources
+E:\5th\C#\BookStore\obj\Debug\BookStore.Forms.Add_Book_Category.resources
+E:\5th\C#\BookStore\obj\Debug\BookStore.Forms.Add_Expense.resources
+E:\5th\C#\BookStore\obj\Debug\BookStore.Forms.Add_Publisher.resources
+E:\5th\C#\BookStore\obj\Debug\BookStore.Forms.Add_Stock.resources
+E:\5th\C#\BookStore\obj\Debug\BookStore.Forms.Bill_print.resources
+E:\5th\C#\BookStore\obj\Debug\BookStore.Forms.ChangePass.resources
+E:\5th\C#\BookStore\obj\Debug\BookStore.Forms.Dashboard.resources
+E:\5th\C#\BookStore\obj\Debug\BookStore.Forms.Confirm_logout.resources
+E:\5th\C#\BookStore\obj\Debug\BookStore.Forms.Finalize_Order.resources
+E:\5th\C#\BookStore\obj\Debug\BookStore.Forms.Report.resources
+E:\5th\C#\BookStore\obj\Debug\BookStore.Forms.Update_Book.resources
+E:\5th\C#\BookStore\obj\Debug\BookStore.Login_Page.resources
+E:\5th\C#\BookStore\obj\Debug\BookStore.Properties.Resources.resources
+E:\5th\C#\BookStore\obj\Debug\BookStore.UC.Expenses_UC.resources
+E:\5th\C#\BookStore\obj\Debug\BookStore.UC.Home_UC.resources
+E:\5th\C#\BookStore\obj\Debug\BookStore.UC.SaleBooks_UC.resources
+E:\5th\C#\BookStore\obj\Debug\BookStore.UC.Stock_UC.resources
+E:\5th\C#\BookStore\obj\Debug\BookStore.UC.ViewSales_UC.resources
+E:\5th\C#\BookStore\obj\Debug\BookStore.csproj.GenerateResource.cache
+E:\5th\C#\BookStore\obj\Debug\RdlCompile.cache
+E:\5th\C#\BookStore\obj\Debug\RdlCompile.compiled
+E:\5th\C#\BookStore\obj\Debug\BookStore.exe
+E:\5th\C#\BookStore\obj\Debug\BookStore.pdb
+E:\5th\C#\BookStore\bin\Debug\BookStore.exe.config
+E:\5th\C#\BookStore\bin\Debug\BookStore.exe
+E:\5th\C#\BookStore\bin\Debug\BookStore.pdb
+E:\5th\C#\BookStore\bin\Debug\Microsoft.ReportViewer.Common.dll
+E:\5th\C#\BookStore\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+E:\5th\C#\BookStore\bin\Debug\Microsoft.ReportViewer.Design.dll
+E:\5th\C#\BookStore\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+E:\5th\C#\BookStore\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+E:\5th\C#\BookStore\bin\Debug\Microsoft.SqlServer.Types.dll
+E:\5th\C#\BookStore\bin\Debug\EnvDTE.dll
+E:\5th\C#\BookStore\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+E:\5th\C#\BookStore\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+E:\5th\C#\BookStore\bin\Debug\stdole.dll
+E:\5th\C#\BookStore\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+E:\5th\C#\BookStore\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+E:\5th\C#\BookStore\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+E:\5th\C#\BookStore\bin\Debug\Microsoft.MSXML.dll
+E:\5th\C#\BookStore\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+E:\5th\C#\BookStore\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+E:\5th\C#\BookStore\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+E:\5th\C#\BookStore\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+E:\5th\C#\BookStore\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+E:\5th\C#\BookStore\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+E:\5th\C#\BookStore\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+E:\5th\C#\BookStore\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+E:\5th\C#\BookStore\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+E:\5th\C#\BookStore\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+E:\5th\C#\BookStore\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\5th\C#\BookStore\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\5th\C#\BookStore\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\5th\C#\BookStore\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\5th\C#\BookStore\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\5th\C#\BookStore\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\5th\C#\BookStore\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\5th\C#\BookStore\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\5th\C#\BookStore\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\5th\C#\BookStore\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\5th\C#\BookStore\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+E:\5th\C#\BookStore\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+E:\5th\C#\BookStore\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+E:\5th\C#\BookStore\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+E:\5th\C#\BookStore\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+E:\5th\C#\BookStore\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+E:\5th\C#\BookStore\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+E:\5th\C#\BookStore\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+E:\5th\C#\BookStore\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+E:\5th\C#\BookStore\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+E:\5th\C#\BookStore\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+E:\5th\C#\BookStore\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+E:\5th\C#\BookStore\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+E:\5th\C#\BookStore\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+E:\5th\C#\BookStore\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+E:\5th\C#\BookStore\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+E:\5th\C#\BookStore\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+E:\5th\C#\BookStore\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+E:\5th\C#\BookStore\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+E:\5th\C#\BookStore\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+E:\5th\C#\BookStore\obj\Debug\BookStore.csproj.CoreCompileInputs.cache
+E:\5th\C#\BookStore\obj\Debug\BookStore.csproj.CopyComplete
